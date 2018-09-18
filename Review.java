@@ -2,14 +2,9 @@
 public class Review {
 
 	public static void main(String[] args) {
-		String[] breakfast = new String[3];
+		MyClass mc = new MyClass();
 		
-		breakfast[0] = "Bacon";
-		breakfast[1] = "Eggs";
-		breakfast[2] = "Toast";
-		
-		for(int i = 0; i<breakfast.length; i++) {
-			System.out.println(breakfast[i]);
-		}
+		System.out.println(mc.myNum);
+		mc.myMethod();
 	}
 }
