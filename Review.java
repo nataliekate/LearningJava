@@ -1,17 +1,18 @@
-import java.util.Scanner;
+import java.io.BufferedReader;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.IOException;
 
 public class Review {
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws IOException {
+		FileReader file = new FileReader("hello");
+		BufferedReader reader = new BufferedReader(file);
+		String data;
+		while ((data = reader.readLine()) != null) {
+			System.out.println(data);
+		}
 		
-		System.out.println("Enter the first number: ");
-		Scanner scan = new Scanner(System.in);
-		int num1 = scan.nextInt();
-		
-		System.out.println("Enter the second number: ");
-		
-		int num2  = scan.nextInt();
-		
-		System.out.println("Sum is " + (num1 + num2));
+		reader.close();
 	}
 }
